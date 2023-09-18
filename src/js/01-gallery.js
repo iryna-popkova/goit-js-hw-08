@@ -6,7 +6,7 @@ import { galleryItems } from './gallery-items';
 
 // Change code below this line
 
-console.log(galleryItems);
+
 
 const container = document.querySelector(".gallery");
 
@@ -16,7 +16,7 @@ container.insertAdjacentHTML('beforeend', markup);
 
 
 function createMarkup(array) {
-  
+
     return array.map(({ preview, original, description }) => {
         return  `<li class="gallery__item">
   <a class="gallery__link" href="${original}">

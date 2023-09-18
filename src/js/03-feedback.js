@@ -33,12 +33,17 @@ function onFormInput(event) {
 form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
+if (input.value === "" || textArea.value === "") {
+    window.alert("Всі поля мають бути заповненні!!!")
+  } else { console.log(formData) };
+
   event.preventDefault();
   formData.email = input.value;
   formData.message = textArea.value;
-  console.log(formData);
   input.value = "";
   textArea.value = "";
-   localStorage.removeItem(formKey);
+  localStorage.removeItem(formKey);
 }
+
+
 
